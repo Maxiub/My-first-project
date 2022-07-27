@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C is for Cat</title>
+  </head>
+  <style>
+    body {
+      background: radial-gradient(
+        circle at 7.5% 24%,
+        rgb(237, 161, 193) 0%,
+        rgb(250, 178, 172) 25.5%,
+        rgb(190, 228, 210) 62.3%,
+        rgb(215, 248, 247) 93.8%
+      );
+    }
+    h1 {
+      text-align: center;
+      color: #f67280;
+    }
+    h2 {
+      text-align: center;
+      color: #f67280;
+    }
+
+    p {
+      font-size: 20px;
+      text-align: center;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    button {
+      color: #6c5b7c;
+      background: #f8b595;
+      margin: 30px auto;
+      display: block;
+      padding: 18px 26px;
+      border: 1px solid #f8b595;
+      transition: all 200ms ease;
+      border-radius: 20px;
+      line-height: 20px;
+      font-size: 18px;
+      box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+      cursor: pointer;
+    }
+
+    button:hover {
+      color: #f8b595;
+      background: #6c5b7c;
+      border: 1px solid #6c5b7c;
+    }
+    div {
+      text-align: center;
+      display: block;
+      color: #f67280;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    span {
+      text-align: center;
+      display: inline-block;
+      color: #6c5b7c;
+    }
+
+    .info {
+      color: black;
+    }
+  </style>
+  <body>
+    <h1>This is Cat's World</h1>
+    <br />
+    <h2>Cats deserve love</h2>
+    <p>
+      <img src =
+      https://s3.amazonaws.com/shecodesio-production/uploads/files/000/033/270/original/Cute_Kitten_image.jpg?1651497436
+      width = 400/>
+    </p>
+    <p>
+      There are many dogs and cats that have been rescued in Japan. Most of the
+      animals have been that have either been surrendered, abused, neglected, or
+      abandoned by their owners and are in desperate need of a new and loving
+      happy home. Animal rescue organizations and Nonprofit organizations
+      throughout Japan are working tirelessly to rescue and protect animals.
+      They are also doing their best to find new homes for the rescued animals.
+    </p>
+    <ul>
+      <li>
+        <a
+          href="https://www.realestate-tokyo.com/living-in-tokyo/pets/animal-shelter-tokyo/"
+          target="_blank"
+          class="info"
+        >
+          <em>Get more information</em>
+        </a>
+      </li>
+    </ul>
+
+    <button>Adopt a cat</button>
+    <hr />
+    <p><strong>Coded by Mia @ 2022</strong></p>
+    <div class="contact">
+      <span class="email">Email:</span>
+      catdeservelove@gmail.com
+      <span class="website">Website:</span>
+      catsdeservelove.com
+    </div>
+    <script>
+      function adopt() {
+        let name = prompt("What is your name?");
+        alert("Hi, " + name + " 👋");
+        let email = prompt("What is your email address?");
+        let newsletter = prompt("Do you want to receive our newsletter?");
+        let h1 = document.querySelector("h1");
+        if (newsletter === "yes") {
+          h1.innerHTML = "Great! We will send via the email" + email;
+        } else {
+          h1.innerHTML = "Check out our cool website 😎";
+        }
+      }
+
+      let adoptButton = document.querySelector("button");
+      adoptButton.addEventListener("click", adopt);
+    </script>
+  </body>
+</html>
